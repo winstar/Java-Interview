@@ -26,7 +26,7 @@ public class RealSubjectIntercept implements MethodInterceptor{
 
         LOGGER.info("before");
 
-        Object invoke = methodProxy.invoke(o, objects);
+        Object invoke = methodProxy.invokeSuper(o, objects);
         LOGGER.info("after");
         return invoke;
     }
